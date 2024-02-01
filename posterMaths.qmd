@@ -1,0 +1,276 @@
+---
+title: Before my First Statistics Lecture I Should Know ...
+format:
+  poster-typst: 
+    size: "36x24"
+    poster-authors: "Author: stesiam"
+    departments: "Department of Statistics and Insurance Science"
+    institution-logo: "./images/ncstate.png"
+    footer-text: "stesiam"
+    footer-url: https://www.stesiam.com/
+    footer-emails: stesiam@proton.me
+    footer-color: "ebcfb2"
+    keywords: ["Statistics", "Undergraduate", "Prerequisites"]
+    bibliographystyle: "apa"
+    bibliography: test.bib
+---
+
+[@larsson2018eulerr] [@sss] [@ssa] [@bookgreek] [@ggplotpackage] [@bookgreek2]
+
+# Basic Identities
+
+## Algebraic
+
+$$(a + b)^2 = a^2 + 2ab + b^2$$
+
+$$(a - b)^2 = a^2 - 2ab + b^2$$
+
+$$a^2 - b^2 = (a-b)(a+b)$$
+
+$$(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$$
+$$(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$$
+
+## Trigonometric Identities
+
+$$sin^2x + cos^2x = 1$$
+<br>
+
+$$tanx = \frac{sinx}{cosx}$$
+
+
+
+$$cotx = \frac{cosx}{sinx}$$
+
+$$sin^2x = \frac{tan^2x}{1 + tan^2x}$$
+
+
+
+$$-1\leq sinx \leq1, -1\leq cosx \leq 1$$
+
+## Logarithmic & Exponential
+
+$$log(xy) = log(x) + log(y)$$
+
+$$log\left(\frac{x}{y}\right) = log(x) - log(y)$$
+
+$$logx^k = k \cdot logx$$
+
+
+
+# Limits
+
+## Identities
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. 
+
+
+$$
+\lim_{x\rightarrow0^+} lnx = +\infty
+$$
+
+$$
+\lim_{x\rightarrow-\infty} lnx = -\infty
+$$
+
+$$
+\lim_{x\rightarrow\infty} a^x = -\infty
+$$
+
+$$
+\lim_{x\rightarrow-\infty} a^x = -\infty
+$$
+
+
+$$
+\lim_{x\rightarrow\infty} e^x = +\infty
+$$
+
+$$
+\lim_{x\rightarrow-\infty} e^x = 0
+$$
+
+
+$$
+\lim_{x\rightarrow0}\frac{sinx}{x}= 1
+$$
+
+$$
+\lim_{x\rightarrow0}\frac{cosx-1}{x} = 0
+$$
+
+## Indeterminate forms
+
+
+There are limits that cannot be evaluated:
+
+| **Form**  | **Solving Approach** |
+| :---: | :---:|
+| $\frac{0}{0}$ | L' Hospital |
+| $\frac{\infty}{\infty}$ | L' Hospital |
+| $0 \cdot \infty$ | Not standard |
+| $\infty - \infty$ | Not standard |
+| $0^{\infty}$ | Not standard | 
+| $1^\infty$ | $e^{ln(...)}$ |
+| $\infty^0$ | Not standard | 
+
+
+**L'Hospital's Rule** can be applied when our limit has either the form of $\frac{\infty}{\infty}$ or $\frac{0}{0}$. In such a case DLH allows the calculation of the limit by using the derivative for both of nomimator and denominator :
+
+$$ \lim_{x\rightarrow x_0} \frac{f(x)}{g(x)} = \lim_{x\rightarrow x_0} \frac{f'(x)}{g'(x)}$$
+
+# Set Operations
+
+## Venn Diagrams
+
+| **Set**  | **Name** | **Venn Diagram** |
+| :---: | :---:|:---: |
+| $A \cup B$ | Union | ![](venns/union.png) |
+| $A \cap B$ |Intersection | ![](venns/intersection.png) |
+| $A - B$ | Difference | ![](venns/awoutb.png) |
+| $B - A$ | Difference | ![](venns/bwouta.png) |
+| $A'$ |Complement| ![](venns/bwouta.png) |
+
+## Probability Identities
+
+1. $Pr(A \cup B) = Pr)(A) + Pr(B) - Pr(A \cap B)$
+
+2. $Pr(A \leq B), \text{if }A \subseteq B$
+
+3. $Pr(A') = 1 - Pr(A)$
+
+# Derivatives
+
+## Symbolism
+
+There are 3 ways to depict derivatives:
+
+
+- **_Lagrange Notation_**: $f'(x), f''(x), \ldots f^{(n)}(x)$ 
+
+- **_Leibniz Notation:_** $\frac{dy}{dx}, \frac{d^2y}{dx^2}, \ldots \frac{d^ny}{dx^n}$
+
+- **_Newton Notation:_** $\dot{y}, \dot{\dot{y}}, \ldots f^{(n)}(x)$
+
+## Common derivatives
+
+
+$$(c)' = 0$$
+
+$$(x^n)' = n \cdot x^{n-1}$$
+
+$$(sinx)' = cosx$$
+
+$$(cosx)' = -sinx$$
+
+$$(tanx)' = \frac{1}{cos^2x}$$
+
+$$(cotx)' = - \frac{1}{sin^2x}$$
+
+$$(lnx)' = \frac{1}{x}$$
+
+$$(e^x)' = e^x$$
+
+## Logarithmic Differentiation
+
+
+# Integration
+
+## By parts
+
+$$ \int f(x)g'(x) dx = f(x)\cdot g(x) - \int g(x) f'(x)  dx$$
+
+A general rule of thumb to choose $g(x)$ is **_LIATE_** approach. The options for $g(x)$ are ordered in descending order:
+
+1. **L**ogarithmic function<br>
+2. **I**nverse Trigonometric function<br>
+3. **A**lgebraic function
+4. **T**rigonometric function
+5. **E**xponential function
+
+In case our integral contains multiple functions of the same category the **LIATE**
+approach is not helpful. There are some tips to choose the best function as follows:<br>
+
+A. Set as $dv$ the most complicated part
+
+B. Set $u$ as function whose derivative $du$ will be simpler than u
+
+## By substitution
+
+We consider: $$\int f(g(x)) \text{ }g'(x) \text{ }dx = \int f(u) du$$
+
+
+$u = g(x)$ και $du = g'(x)dx$
+
+
+
+
+# Appendix
+
+## Graphs
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8}
+library(ggplot2)
+library(gridExtra)
+x <- seq(-2, 10, by = 0.1)
+y <- log(x)
+data <- data.frame(x, y)
+
+# Create a ggplot object and plot the data
+p1 = ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = "blue", size = 1) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "black") +
+  geom_vline(xintercept = 0, linetype = "solid", color = "black") +
+  labs(title = "Logarithmic Graph", x = "x", y = "y") +
+  geom_text(aes(x = 7.5, y = 1.2, label = "logx"), size = 8) +
+  theme_light()
+x <- seq(-4, 3, by = 0.1)
+y <- exp(x)
+data <- data.frame(x, y)
+
+
+library(latex2exp)
+p2 = ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = "blue", size = 1) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "black") +
+  geom_vline(xintercept = 0, linetype = "solid", color = "black") +
+  labs(title = "Exponential Graph", x = "x", y = "y") +
+  theme_light() 
+
+grid.arrange(p1,p2, nrow =1)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8}
+x <- seq(-pi, 2*pi, by = 0.1)
+y <- sin(x)
+data <- data.frame(x, y)
+
+p3 = ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = "blue", size = 1) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "black") +
+  geom_vline(xintercept = 0, linetype = "solid", color = "black") +
+  labs(title = "Sine Graph", x = "x", y = "y") +
+  theme_light() 
+
+x <- seq(-pi, 2*pi, by = 0.1)
+y <- cos(x)
+data <- data.frame(x, y)
+
+p4 = ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = "blue", size = 1) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "black") +
+  geom_vline(xintercept = 0, linetype = "solid", color = "black") +
+  labs(title = "Cosine Graph", x = "x", y = "y") +
+  theme_light() 
+
+x <- seq(-pi, pi, by = 0.1)
+y <- tan(x)
+data <- data.frame(x, y)
+
+
+grid.arrange(p3,p4, nrow =1)
+```
+
+## Constants
+
+- $\pi \approx 3.1415\ldots$
+- $e \approx 2.7182$
