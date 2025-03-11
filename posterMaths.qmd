@@ -1,5 +1,6 @@
 ---
 title: Before my First Statistics Lecture I Should Know ...
+engine: knitr
 format:
   poster-typst: 
     size: "36x24"
@@ -33,11 +34,8 @@ $$(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$$
 ## Trigonometric Identities
 
 $$sin^2x + cos^2x = 1$$
-<br>
 
 $$tanx = \frac{sinx}{cosx}$$
-
-
 
 $$cotx = \frac{cosx}{sinx}$$
 
@@ -54,7 +52,6 @@ $$log(xy) = log(x) + log(y)$$
 $$log\left(\frac{x}{y}\right) = log(x) - log(y)$$
 
 $$logx^k = k \cdot logx$$
-
 
 
 # Limits
@@ -128,7 +125,6 @@ $$ \lim_{x\rightarrow x_0} \frac{f(x)}{g(x)} = \lim_{x\rightarrow x_0} \frac{f'(
 | $A \cap B$ |Intersection | ![](venns/intersection.png) |
 | $A - B$ | Difference | ![](venns/awoutb.png) |
 | $B - A$ | Difference | ![](venns/bwouta.png) |
-| $A'$ |Complement| ![](venns/bwouta.png) |
 
 ## Probability Identities
 
@@ -170,8 +166,19 @@ $$(lnx)' = \frac{1}{x}$$
 
 $$(e^x)' = e^x$$
 
+$$(a^x)' = a^x \cdot lna$$
+
 ## Logarithmic Differentiation
 
+**Purpose:** Just a differenation method in case of multiple complex expressions. Let's suppose $y = f(x)$:\newline
+
+**Step A:** Logarithm both sides $$ln(y) = lnf(x)$$ \newline
+
+**Step B:** Differentiate both sides $$\frac{d}{dx}ln(y) = \frac{d}{dx}ln\left(f\left(x\right)\right)$$ 
+
+**Step C:** Solve differentation $$\frac{1}{y} \frac{dy}{dx} = \frac{f'(x)}{f(x)}$$ 
+ 
+**Step D:** Solve to $\frac{dy}{dx}$
 
 # Integration
 
@@ -208,7 +215,7 @@ $u = g(x)$ και $du = g'(x)dx$
 
 ## Graphs
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6, fig.height=2.5}
 library(ggplot2)
 library(gridExtra)
 x <- seq(-2, 10, by = 0.1)
@@ -239,7 +246,7 @@ p2 = ggplot(data, aes(x = x, y = y)) +
 grid.arrange(p1,p2, nrow =1)
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6, fig.height=2.5}
 x <- seq(-pi, 2*pi, by = 0.1)
 y <- sin(x)
 data <- data.frame(x, y)
@@ -274,3 +281,16 @@ grid.arrange(p3,p4, nrow =1)
 
 - $\pi \approx 3.1415\ldots$
 - $e \approx 2.7182$
+
+## Misconceptions
+
+### Logarithms
+
+- ln: Natural / Neperian logarithm ($ln(x) = log_e(x)$)
+- log: Normal logarithm ($log(x) = log_{10}(x)$)
+
+### Factorials
+
+- $k! = 1 \cdot 2 \cdot \cdots k$
+- $1! = 1$
+- $0! = 1$
